@@ -15,6 +15,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Json,
 		C3.Plugins.TextBox,
 		C3.Plugins.Button,
+		C3.Plugins.advert,
+		C3.Plugins.Mouse,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.TiledBg.Acts.SetPos,
 		C3.Plugins.TiledBg.Acts.SetSize,
@@ -79,18 +81,26 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.EvaluateExpression,
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Plugins.Text.Acts.SetVisible,
+		C3.Plugins.Text.Exps.Text,
 		C3.Plugins.System.Cnds.CompareBetween,
 		C3.Plugins.Json.Acts.Parse,
 		C3.Plugins.AJAX.Exps.LastData,
 		C3.Plugins.Json.Exps.Get,
 		C3.Plugins.AJAX.Acts.SetHeader,
 		C3.Plugins.AJAX.Acts.Post,
+		C3.Plugins.Browser.Acts.ConsoleLog,
 		C3.Plugins.System.Cnds.ForEach,
+		C3.Plugins.TextBox.Acts.SetCSSStyle,
+		C3.Plugins.Button.Acts.SetCSSStyle,
 		C3.Plugins.Button.Cnds.OnClicked,
 		C3.Plugins.TextBox.Exps.Text,
 		C3.Plugins.AJAX.Cnds.OnComplete,
 		C3.Plugins.Button.Acts.SetEnabled,
-		C3.Plugins.System.Exps.find
+		C3.Plugins.Text.Acts.SetOpacity,
+		C3.Plugins.System.Exps.len,
+		C3.Plugins.TextBox.Acts.SetText,
+		C3.Plugins.System.Exps.left,
+		C3.Plugins.System.Exps.right
 	];
 };
 self.C3_JsPropNameTable = [
@@ -188,6 +198,14 @@ self.C3_JsPropNameTable = [
 	{ok_btn2: 0},
 	{StarID: 0},
 	{Star: 0},
+	{Text4: 0},
+	{Text3: 0},
+	{enabled: 0},
+	{Submit_2: 0},
+	{Submit_user: 0},
+	{Sprite2: 0},
+	{MobileAdvert: 0},
+	{Mouse: 0},
 	{TFamily_Home: 0},
 	{Family_Text_Home: 0},
 	{canPlay: 0},
@@ -211,7 +229,8 @@ self.C3_JsPropNameTable = [
 	{isTimeUp: 0},
 	{currentQues: 0},
 	{ansCorrect: 0},
-	{Increase: 0}
+	{Increase: 0},
+	{Discount: 0}
 ];
 
 self.InstanceType = {
@@ -306,6 +325,13 @@ self.InstanceType = {
 	Sprite: class extends self.ISpriteInstance {},
 	ok_btn2: class extends self.ISpriteInstance {},
 	Star: class extends self.ISpriteInstance {},
+	Text4: class extends self.ITextInstance {},
+	Text3: class extends self.ITextInstance {},
+	Submit_2: class extends self.ISpriteInstance {},
+	Submit_user: class extends self.ITextInstance {},
+	Sprite2: class extends self.ISpriteInstance {},
+	MobileAdvert: class extends self.IInstance {},
+	Mouse: class extends self.IInstance {},
 	TFamily_Home: class extends self.ISpriteInstance {},
 	Family_Text_Home: class extends self.ITextInstance {}
 }
